@@ -1,0 +1,11 @@
+
+development:
+  adapter: postgresql
+  database: learn_list_development
+  host: localhost
+
+test:
+  adapter: postgresql
+  database: learn_list_test
+  host: localhost
+
