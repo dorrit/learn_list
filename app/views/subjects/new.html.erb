@@ -1,0 +1,10 @@
+<% provide :title, "Add a new subject" %>
+
+<%= render :partial => 'layouts/errors', :locals => {:object => @subject} %>
+
+<%= form_for Subject.new do |f| %>
+  <%= f.label :subject_name %>
+  <%= f.text_field :subject_name, :autofocus => true %>
+
+  <%= f.submit "Add", :class => 'btn btn-primary' %>
+<% end %>

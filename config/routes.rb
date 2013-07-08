@@ -1,4 +1,16 @@
 LearnList::Application.routes.draw do
+  resources :schools
+  resources :sections
+  resources :courses
+  resources :subjects
+  resources :teachers
+  resources :students
+
+
+
+
+  root :to => "schools#new"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

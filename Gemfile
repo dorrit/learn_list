@@ -2,7 +2,6 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.13'
 gem 'pg'
-gem 'devise'
 gem 'bootstrap-sass', '~> 2.3.1.0'
 
 group :assets do

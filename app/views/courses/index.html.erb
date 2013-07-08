@@ -1,0 +1,18 @@
+<% provide :title, 'Schools' %>
+
+<table class='table'>
+  <thead class='section'>
+    <tr>
+      <th>Course Name</th>
+      <th></th>
+    </tr>
+  </thead>
+  <% @courses.each do |course| %>
+    <tr>
+      <td><%= link_to "#{course.course_name}", courses_path(:course_id => course.id) %></td>
+      <td><%= link_to 'Delete', course, :method => :delete, :data => { :confirm => 'Are you sure?' }, :class => 'btn btn-mini' %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to 'Add a Course', new_course_path, :class => 'btn btn-primary' %></p>

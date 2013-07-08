@@ -1,0 +1,10 @@
+<% provide :title, "Add a new course" %>
+
+<%= render :partial => 'layouts/errors', :locals => {:object => @course} %>
+
+<%= form_for Course.new do |f| %>
+  <%= f.label :course_name %>
+  <%= f.text_field :course_name, :autofocus => true %>
+
+  <%= f.submit "Add", :class => 'btn btn-primary' %>
+<% end %>
