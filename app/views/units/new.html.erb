@@ -1,0 +1,26 @@
+<% provide :title, "Add a new unit" %>
+
+<%= form_for Unit.new do |f| %>
+  <%= f.label :unit_name %>
+  <%= f.text_field :unit_name, :autofocus => true %>
+
+  <%= f.submit "Add", :class => 'btn btn-primary' %>
+<% end %>
+
+
+<table class='table'>
+  <thead class='unit'>
+    <tr>
+      <th>Unit Name</th>
+      <th></th>
+    </tr>
+  </thead>
+  <% @units.each do |unit| %>
+    <tr>
+      <td><%= link_to "#{unit.unit_name}", units_path(:unit_id => unit.id) %></td>
+      <td><%= link_to 'Delete', unit, :method => :delete, :data => { :confirm => 'Are you sure?' }, :class => 'btn btn-mini' %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to 'Add a Unit', new_unit_path, :class => 'btn btn-primary' %></p>

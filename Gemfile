@@ -21,12 +21,12 @@ end
 
 group :test, :development do
   gem 'rspec-rails'
+  gem 'guard-rspec'
 end
 
 group :development do
   gem 'quiet_assets'
   gem 'better_errors'
   gem 'binding_of_caller'
-  gem 'guard-rspec'
   gem 'rb-fsevent'
 end

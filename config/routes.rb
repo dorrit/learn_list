@@ -5,11 +5,12 @@ LearnList::Application.routes.draw do
   resources :subjects
   resources :teachers
   resources :students
+  resources :learning_links
+  resources :units
 
+match 'home' => 'learning_links#add'
 
-
-
-  root :to => "schools#new"
+root :to => "learning_links#add"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

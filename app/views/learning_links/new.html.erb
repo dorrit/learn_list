@@ -1,0 +1,22 @@
+<% provide :title, "Add a new learning link." %>
+
+<%= form_for LearningLink.new do |f| %>
+
+  <%= f.label :Unit %>
+  <%= f.text_field :unit %>
+
+  <%= f.label :Topic %>
+  <%= f.text_field :topic %>
+
+  <%= f.label :Subtopic %>
+  <%= f.text_field :subtopic %>
+
+  <%= f.label :Learning_Link_Title %>
+  <%= f.text_field :learn_title, :autofocus => true %>
+
+  <%= f.label :Link %>
+  <%= f.text_field :learn_url %>
+
+  <%= f.submit "Add", :class => 'btn btn-primary' %>
+<% end %>
+
